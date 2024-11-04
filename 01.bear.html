@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        .unBearableHead {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background: black;
+            /* position 要絕對定位  */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }   
+
+        .unBearableHead::before {
+            content: "";
+            width: 60px;
+            height: 60px;
+            border: 12px solid white;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 30%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+        }   
+        
+        .unBearableHead::after {
+            content: "";
+            width: 60px;
+            height: 60px;
+            border: 12px solid white;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 70%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+        }   
+
+        .bearMouth {
+            width: 120px;
+            height: 80px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background: white;
+            /* position 要絕對定位  */
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+        /* 左腮紅 */
+        .bearMouth::before {
+            content:"";
+            width: 80px;
+            height: 80px;
+            border: 0px solid #333;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            left: -50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+        .bearMouth::after {
+            content:"";
+            width: 80px;
+            height: 80px;
+            border: 0px solid #333;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            left: 150%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+           
+        .bearEN {
+            width: 20px;
+            height: 15px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .bearEN::before {
+            content:"";
+            width: 50px;
+            height: 50px;
+            border: 10px solid #000;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            left: -450%;
+            top: -900%;
+            transform: translate(-50%, -50%);
+        }
+        .bearEN::after {
+            content:"";
+            width: 50px;
+            height: 50px;
+            border: 10px solid #000;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            left: 500%;
+            top: -900%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bearOral {
+            width: 80px;
+            height: 25px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            left: 50%;
+            top: 130%;
+            transform: translate(-50%, 0%);
+        }
+        .bearOral::before {
+            content: "";
+            width: 80px;
+            height: 40px;
+            border: 0px solid #d35b5b;
+            background: white;
+            position: absolute;
+            left: 30%;
+            top: 330%;
+            transform: translate(0%, -50%);
+            clip-path: polygon(45% 0, 100% 0, 45% 100%, 0% 100%);
+        }
+        .bearOral::after {
+            content: "";
+            width: 80px;
+            height: 40px;
+            border: 0px solid #d35b5b;
+            background: white;
+            position: absolute;
+            left: 70%;
+            top: 330%;
+            transform: translate(-100%, -50%);
+            clip-path: polygon(0% 0, 45% 0, 100% 100%, 45% 100%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="unBearableHead">
+        <div class="bearMouth">
+        <div class="bearEN">
+        <div class="bearOral">
+        </div> 
+        </div>
+        </div>
+    </div>
+</body>
+</html>

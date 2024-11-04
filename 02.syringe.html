@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /* height: 100vh; */
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-color: transparent
+        }
+
+        .shadow {
+            position: absolute;
+            top: 50%;
+            left: 46.2%;
+            transform: translate(-50%, -50%);
+            width: 396px;
+            height: 75px;
+            background: linear-gradient(transparent 0%, rgba(255, 255, 255, 0) 10%, rgba(50, 50, 50, 0.3) 53%, rgba(50, 50, 50, 0.3) 58%, rgba(255, 255, 255, 0) 90%, transparent 100%);
+        }
+
+        /* 長矮推筒 */
+        .syringe {
+            position: absolute;
+            width: 360px;
+            height: 60px;
+            top: 50%;
+            left: 50%;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            background-image:
+                linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0) 10%, rgba(50, 50, 50, 0.3) 53%, rgba(50, 50, 50, 0.3) 58%, rgba(255, 255, 255, 0) 90%, transparent 100%);
+        }
+
+        /* 液體 */
+        .syringe::before {
+            content: " ";
+            position: absolute;
+            width: 300px;
+            height: 75px;
+            top: 50%;
+            left: 50%;
+            border: 1px solid #bbb;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            background-image:
+                linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0) 10%, rgba(50, 50, 50, 0.3) 53%, rgba(50, 50, 50, 0.3) 58%, rgba(255, 255, 255, 0) 90%, transparent 100%),
+                linear-gradient(to right, white 45%, black 45%, black 55%, deeppink 55%, deeppink 100%);
+        }
+
+        /* 推把 */
+        .syringe::after {
+            content: " ";
+            position: absolute;
+            width: 40px;
+            height: 75px;
+            top: 50%;
+            left: -5%;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            background-image:
+                linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0) 10%, rgba(50, 50, 50, 0.3) 53%, rgba(50, 50, 50, 0.3) 58%, rgba(255, 255, 255, 0) 90%, transparent 100%);
+        }
+
+        /* 就是針 */
+        .needle {
+            content: " ";
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            top: 50%;
+            left: 107%;
+            border: 1px solid #666666;
+            transform: translate(-50%, -50%);
+            background: rgb(0, 0, 0);
+        }
+
+        /* 字 */
+        .needle::before {
+            content: "Made in 1114";
+            position: absolute;
+            width: 300px;
+            height: 75px;
+            top: 25px;
+            left: -175px;
+            transform: translate(-50%, -50%);
+            color: #ff0000;
+            font-family: 'Microsoft JhengHei', sans-serif;
+            font-size: 0.5rem;
+            border: 0px solid #666666;
+            line-height: 75px
+        }
+
+        /* 刻度 */
+        .needle::after {
+            content: "";
+            position: absolute;
+            width: 290px;
+            height: 10px;
+            top: -30px;
+            left: -175px;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            background-image:
+                linear-gradient(to right, #aaa 1px, transparent 1px, transparent 8px);
+            background-repeat: repeat;
+            background-size: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="syringe">
+            <div class="needle">
+                <!-- <p>Made in 1114 </p>  -->
+            </div>
+        </div>
+        <!-- <div class="shadow"> 
+            </div> -->
+    </div>
+</body>
+
+</html>
